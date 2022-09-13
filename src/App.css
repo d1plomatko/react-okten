@@ -36,3 +36,50 @@
     transform: rotate(360deg);
   }
 }
+
+.simpsons { 
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+  gap: 20px;
+
+}
+
+.simpson {
+  background-color: silver;
+  width: 500px;
+  height: 700px;
+}
+
+.simpson > p {
+  box-sizing: border-box;
+  padding: 0 30px;
+}
+
+.simpson > img {
+  height: 300px;
+}
+
+.simpson:nth-child(3) > img{
+  height: 200px;
+}
+
+.characters {
+  max-width: 1200px;
+
+  margin: 20px auto;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+  gap: 40px;
+}
+
+.character {
+  background-color: silver;
+  width: 350px;
+  height: 500px;
+}
