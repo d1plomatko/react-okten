@@ -1,15 +1,18 @@
 import axios from "axios"
 
+let baseURL = 'https://jsonplaceholder.typicode.com/users'
+
+
 let axiosInstance = axios.create({
-    baseURL: 'https://jsonplaceholder.typicode.com/users'
+    baseURL
 })
 
 const getUsersAxios = () => {
     return axiosInstance.get()
 }
 
-const gerUserAxios = (id) => {
-    return axiosInstance.get(`/${id}`)
+const getUserPosts = (id) => {
+    return axiosInstance.get(baseURL + '/' + id + '/' + 'posts')
 }
 
-export {gerUserAxios, getUsersAxios}
+export {getUsersAxios, getUserPosts}
