@@ -1,13 +1,14 @@
-import {getUserPosts, getUsersAxios} from "../../services/users.axio.services";
+
 import {useEffect, useState} from "react";
 import User from "../User/User";
 
+import {getUsersAxios} from "../../services/users.axio.services";
 
-
-export default function Users(){
+export default function Users({postLift}){
 
     let [users, setUsers] = useState([]);
     let [user, setUser] = useState(null)
+
 
     useEffect(() => {
         getUsersAxios().then(value => setUsers(value.data))
@@ -22,6 +23,7 @@ export default function Users(){
 
     }
 
+
     return(
 
         <div>
@@ -29,8 +31,9 @@ export default function Users(){
                 {user && <div>{JSON.stringify(user)}</div>}
             </div>
             <div className={'users'}>
-                {users.map(user => (<User user = {user} key = {user.id} lift = {lift} getUserPosts = {getUserPosts}/>))}
+                {users.map(user => (<User user = {user} key = {user.id} lift = {lift} postLift = {postLift} />))}
             </div>
+
         </div>
     )
 

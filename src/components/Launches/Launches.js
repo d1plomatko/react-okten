@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 
-import {getLaunches} from "../../services/spacex.axios.services";
+import {getLaunches} from "../../services/spacex.axios.services"
 import Launch from "../Launch/Launch";
 
 export default function Launches(){
