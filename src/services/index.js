@@ -1,2 +1,2 @@
 export * from './axio.services'
-export * from './user.services'
+export * from './users.services'

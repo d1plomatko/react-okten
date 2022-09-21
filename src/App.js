@@ -1,11 +1,19 @@
 
 import './App.css';
-import Users from "./components/Users/Users";
+
+import UserForm from "./components/UserForm/UserForm";
+import CommentForm from "./components/CommentForm/CommentForm";
+
 
 function App() {
   return (
       <div>
-        <Users />
+
+          <UserForm/>
+          <hr/>
+          <CommentForm />
+
+
       </div>
   )
 
