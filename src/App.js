@@ -1,17 +1,18 @@
 
 import './App.css';
 
-import UserForm from "./components/UserForm/UserForm";
-import CommentForm from "./components/CommentForm/CommentForm";
+
+import Users from "./components/Users/Users";
+import Comments from "./components/Comments/Comments";
 
 
 function App() {
   return (
       <div>
 
-          <UserForm/>
+          <Users/>
           <hr/>
-          <CommentForm />
+          <Comments />
 
 
       </div>

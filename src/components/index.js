@@ -1,2 +1,6 @@
 export * from 'UserForm/UserForm'
 export * from 'CommentForm/CommentForm'
+export * from 'Users/Users'
+export * from 'User/User'
+export * from 'Comment/Comment'
+export * from 'Comments/Comments'

@@ -7,7 +7,7 @@ import {userService} from "../../services";
 import css from "./UserForm.module.css"
 
 
-export default function UserForm(){
+export default function UserForm({setUsers}){
 
     const {register, handleSubmit, reset, formState: {errors, isValid}, setValue} = useForm({
         resolver : joiResolver(userValidator),
@@ -23,7 +23,7 @@ export default function UserForm(){
 
     const submit = async (user) => {
         const {data} = await userService.createUser(user)
-        console.log(data);
+        setUsers(users => [...users, data] )
         reset();
     }
 

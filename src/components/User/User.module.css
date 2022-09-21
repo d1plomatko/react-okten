@@ -1,0 +1,14 @@
+.User {
+    width: 150px;
+    height: 150px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+
+    box-sizing: border-box;
+    border: 1px solid black;
+
+}
