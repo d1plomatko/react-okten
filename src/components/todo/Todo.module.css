@@ -1,0 +1,14 @@
+.Todo {
+    width: 200px;
+    height: 180px;
+    text-align: center;
+
+    box-sizing: border-box;
+    border: 1px solid silver;
+
+    padding: 10px;
+}
+
+.Todo > div {
+    margin-bottom: 10px;
+}

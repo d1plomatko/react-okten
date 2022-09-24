@@ -1,0 +1,14 @@
+.Album {
+    width: 200px;
+    height: 150px;
+    text-align: center;
+
+    box-sizing: border-box;
+    border: 1px solid silver;
+
+    padding: 10px;
+}
+
+.Album > div {
+    margin-bottom: 10px;
+}

@@ -1,0 +1,14 @@
+.Comment {
+    width: 200px;
+    height: 150px;
+    text-align: center;
+
+    box-sizing: border-box;
+    border: 1px solid silver;
+
+    padding: 10px;
+}
+
+.Comment > div {
+    margin-bottom: 10px;
+}

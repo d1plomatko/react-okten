@@ -1,0 +1,14 @@
+.Post {
+    margin: 20px auto;
+
+    width: 300px;
+    text-align: center;
+
+    box-sizing: border-box;
+    border: 1px solid silver;
+    padding: 10px;
+}
+
+.Post > div {
+    margin-bottom: 10px;
+}
