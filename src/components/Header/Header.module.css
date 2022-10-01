@@ -1,0 +1,16 @@
+.Header {
+    height: 60px;
+    width: 100%;
+
+    background-color: darkslateblue;
+
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.Header > button:nth-child(2){
+    margin-right: 40px;
+}
