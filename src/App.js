@@ -1,12 +1,13 @@
 
 import './App.css';
 
-import {Cats} from "./components";
+import {Cats, Dogs} from "./components";
 
 function App() {
     return (
-        <div className="App">
+        <div className={'container'}>
             <Cats/>
+            <Dogs/>
         </div>
     );
 }

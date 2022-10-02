@@ -13,7 +13,9 @@ const reducer = (state, action) => {
 
         case DELETE :
             const index = state.findIndex(value => value.id === action.payload.id)
-            state.splice(index, 1)
+            if (index !== -1){
+                state.splice(index, 1)
+            }
             return [...state]
 
     }
