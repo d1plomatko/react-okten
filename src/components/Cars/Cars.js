@@ -1,10 +1,10 @@
 import {Car} from "../Car/Car";
 
-const Cars = ({cars}) => {
+const Cars = ({cars, setCars, setCarUpdate}) => {
 
     return(
         <div>
-            {cars.map(car => <Car car={car} key={car.id}/>)}
+            {cars.map(car => <Car car={car} key={car.id} setCars={setCars} setCarUpdate={setCarUpdate}/>)}
         </div>
     )
 

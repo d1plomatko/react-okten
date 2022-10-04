@@ -1,16 +1,48 @@
 .Header {
-    height: 60px;
-    width: 100%;
-
     background-color: darkslateblue;
-
-    display: flex;
-    justify-content: end;
-    align-items: center;
-
-    gap: 20px;
 }
 
-.Header > button:nth-child(2){
-    margin-right: 40px;
+.Container {
+    max-width: 1200px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0 auto;
+}
+
+.Container h3 {
+    color: snow;
+    font-size: 22px;
+}
+
+.Buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.Buttons button {
+    border-radius: 0;
+    border: none;
+    background-color: snow;
+
+    width: 75px;
+    height: 25px;
+
+    font-weight: 700;
+
+    transition: all .2s linear;
+
+    cursor: pointer;
+}
+
+.Buttons button:hover {
+    background-color: red;
+    color: snow;
+}
+
+.Buttons button:active {
+    background-color: red;
+    color: snow;
 }

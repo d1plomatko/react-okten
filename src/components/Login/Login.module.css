@@ -1,0 +1,64 @@
+.Container {
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 15px;
+
+    max-width: 400px;
+    height: 300px;
+    margin: 100px auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #d6f2fa;
+
+}
+
+.Container h3 {
+    margin: 0;
+}
+
+
+.LoginForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.LoginForm input {
+    width: 200px;
+    height: 25px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+
+.LoginForm button {
+    border-radius: 0;
+    border: none;
+    background-color: darkslateblue;
+
+    width: 100px;
+    height: 30px;
+
+    font-weight: 700;
+    color: snow;
+
+    transition: all .2s linear;
+
+    cursor: pointer;
+
+    margin-top: 10px;
+}
+
+.LoginForm button:hover {
+    background-color: red;
+    width: 105px;
+    height: 35px;
+
+    margin-top: 5px;
+}
