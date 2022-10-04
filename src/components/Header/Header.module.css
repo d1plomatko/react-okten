@@ -1,0 +1,33 @@
+.Header {
+    background-color: darkslateblue;
+}
+
+.Navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 70px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 40px;
+
+}
+
+.Navbar a {
+    text-decoration: none;
+    color: snow;
+    font-size: 24px;
+    font-weight: 500;
+
+    transition: all .2s linear;
+}
+
+.Navbar a:hover {
+    color: yellow;
+}
+
+.Navbar a[class='active'] {
+    color: yellow;
+}
