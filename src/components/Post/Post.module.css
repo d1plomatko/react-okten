@@ -1,0 +1,12 @@
+.post{
+    width: 400px;
+    height: 50px;
+
+    box-sizing: border-box;
+    border: 2px solid silver;
+
+    padding-left: 10px;
+
+    display: flex;
+    align-items: center;
+}

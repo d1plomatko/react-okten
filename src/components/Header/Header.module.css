@@ -1,0 +1,44 @@
+.header {
+    background-color: silver;
+}
+
+.container {
+    max-width: 1200px;
+    height: 60px;
+
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+.navbar {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: snow;
+    font-size: 24px;
+    font-weight: 500;
+
+    transition: all .2s ease;
+}
+
+.username {
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: black;
+}
+
+.navbar a[class='active']{
+    color: black;
+}
