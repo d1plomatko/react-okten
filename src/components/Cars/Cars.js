@@ -3,6 +3,7 @@ import {useEffect} from "react";
 
 import {carsActions} from "../../redux";
 import {Car} from "../Car/Car";
+import css from './Cars.module.css'
 
 const Cars = () => {
 
@@ -14,8 +15,11 @@ const Cars = () => {
     }, [])
 
     return(
-        <div>
-            {cars.map(car => <Car key={car.id} car={car}/>)}
+        <div className={css.container}>
+            <h1>Cars</h1>
+            <div className={css.cars}>
+                {cars.map(car => <Car key={car.id} car={car}/>)}
+            </div>
         </div>
     )
 

@@ -4,9 +4,8 @@ import {CarForm, Cars} from "./components";
 
 function App() {
   return (
-    <div>
+    <div className={'container'}>
       <CarForm/>
-      <hr/>
       <Cars/>
     </div>
   );
