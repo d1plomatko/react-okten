@@ -6,14 +6,15 @@ const initialState = {
     characters: [],
     error: null,
     prev: null,
-    next: null
+    next: null,
+    currentPage: '1'
 }
 
 const getAll = createAsyncThunk(
     'characterSlice/getAll',
-    async ({query}, {rejectWithValue}) => {
+    async ({page}, {rejectWithValue}) => {
         try {
-            const {data} = await charactersService.getAll(query);
+            const {data} = await charactersService.getAll(page);
             console.log(data.info)
             return data
         } catch (e) {
@@ -25,6 +26,11 @@ const getAll = createAsyncThunk(
 const characterSlice = createSlice({
     name: 'charactersSlice',
     initialState,
+    reducers: {
+      setCurrentPage: (state, action) => {
+          state.currentPage = action.payload
+      }
+    },
     extraReducers: builder =>
         builder
             .addCase(getAll.fulfilled, (state, action) => {
@@ -37,11 +43,13 @@ const characterSlice = createSlice({
             })
 });
 
-const charactersActions = {
-    getAll
-};
 
-const {reducer: charactersReducer} = characterSlice;
+const {reducer: charactersReducer, actions: {setCurrentPage}} = characterSlice;
+
+const charactersActions = {
+    getAll,
+    setCurrentPage
+};
 
 export {
     charactersActions,

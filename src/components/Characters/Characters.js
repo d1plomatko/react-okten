@@ -7,22 +7,23 @@ import {useSearchParams} from "react-router-dom";
 
 const Characters = () => {
 
-    const {characters, prev, next} = useSelector(state => state.charactersReducer);
+    const {characters, prev, next, currentPage} = useSelector(state => state.charactersReducer);
     const dispatch = useDispatch();
 
     const [query, setQuery] = useSearchParams({page: '1'});
 
-    const page = query.get('page');
 
     useEffect(() => {
-        dispatch(charactersActions.getAll({page}))
-    }, [page])
+        dispatch(charactersActions.getAll({currentPage}))
+    }, [currentPage])
 
     const prevPage = () => {
         setQuery(value => ({page: value.get('page') - 1}))
+        dispatch(charactersActions.setCurrentPage(currentPage-1))
     }
     const nextPage = () => {
         setQuery(value => ({page: +value.get('page') + 1}))
+        dispatch(charactersActions.setCurrentPage(+currentPage+1))
     }
 
     return (
