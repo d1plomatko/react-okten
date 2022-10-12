@@ -6,8 +6,7 @@ const initialState = {
     characters: [],
     error: null,
     prev: null,
-    next: null,
-    currentPage: '1'
+    next: null
 }
 
 const getAll = createAsyncThunk(
@@ -26,11 +25,6 @@ const getAll = createAsyncThunk(
 const characterSlice = createSlice({
     name: 'charactersSlice',
     initialState,
-    reducers: {
-      setCurrentPage: (state, action) => {
-          state.currentPage = action.payload
-      }
-    },
     extraReducers: builder =>
         builder
             .addCase(getAll.fulfilled, (state, action) => {
@@ -44,11 +38,10 @@ const characterSlice = createSlice({
 });
 
 
-const {reducer: charactersReducer, actions: {setCurrentPage}} = characterSlice;
+const {reducer: charactersReducer} = characterSlice;
 
 const charactersActions = {
-    getAll,
-    setCurrentPage
+    getAll
 };
 
 export {
