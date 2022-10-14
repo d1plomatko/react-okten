@@ -1,0 +1,44 @@
+header {
+    background-color: darkslateblue;
+
+    position: fixed;
+    top: 0;
+
+    width: 100%;
+
+    z-index: 100;
+
+    box-shadow: 0 0 12px 1px darkslateblue;
+}
+
+.header_wrapper {
+    max-width: 1200px;
+    height: 75px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: snow;
+    font-weight: bold;
+    font-size: 24px;
+    font-family: Tahoma, sans-serif;
+
+    text-decoration: none;
+
+}
+
+.navbar a {
+    text-decoration: none;
+    color: snow;
+
+
+}
+
+.navbar a[class='active'] {
+    font-weight: bold;
+    border-bottom: 2px solid snow;
+}

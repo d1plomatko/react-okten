@@ -6,15 +6,15 @@ const initialState = {
     characters: [],
     error: null,
     prev: null,
-    next: null
+    next: null,
+    totalPages: 1
 }
 
 const getAll = createAsyncThunk(
     'characterSlice/getAll',
-    async ({page}, {rejectWithValue}) => {
+    async ({page, name}, {rejectWithValue}) => {
         try {
-            const {data} = await charactersService.getAll(page);
-            console.log(data.info)
+            const {data} = await charactersService.getAll(page, name);
             return data
         } catch (e) {
             return rejectWithValue(e.response.data)
@@ -31,6 +31,8 @@ const characterSlice = createSlice({
                 state.characters = action.payload.results
                 state.prev = action.payload.info.prev
                 state.next = action.payload.info.next
+                state.error = null
+                state.totalPages = action.payload.info.pages
             })
             .addCase(getAll.rejected, (state, action) => {
                 state.error = action.payload
